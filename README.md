@@ -26,7 +26,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|user_name|string|null: false, unique: true, add_index|
+|name|string|null: false, unique: true, add_index|
 |email|string|null: false, unique: true|
 |password|string|null: false|
 
