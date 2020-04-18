@@ -63,7 +63,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|chat_message|text|null: false|
+|chat_message|text||
 |chat_image|string||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
