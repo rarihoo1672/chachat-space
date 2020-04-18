@@ -57,7 +57,7 @@ Things you may want to cover:
 
 ### Association
 - belongs_to: user
-- belongs_to: group_user
+- belongs_to: group
 
 ## messagesテーブル
 
@@ -71,4 +71,4 @@ Things you may want to cover:
 
 ### Association
 - belongs_to: user
-- belongs_to: group_user
+- belongs_to: group
