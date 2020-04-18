@@ -70,5 +70,5 @@ Things you may want to cover:
 
 
 ### Association
-- belongs_to: users
-- belongs_to: groups_users
+- belongs_to: user
+- belongs_to: group_user
