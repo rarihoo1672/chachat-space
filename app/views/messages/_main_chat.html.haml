@@ -1,15 +1,20 @@
 .main_chat
   .group-info
     .group-info__box
-      %h3.group-info__box__group-name
+      %h2.group-info__box__group-name
         グループネーム
-      %p.group-info__box__member-name
-        チームメンバ
-        aaaaaaaa
-        aaaaaaaaaa
-    .group-info__edit
-      = link_to "#", class: "edit" do
+
+      %ul.group-info__box__member-list
+        Member :
+        %li.group-info__box__member-list--menber
+          いいいいい
+        %li.group-info__box__member-list--menber
+          あああああ  
+
+    = link_to "#", class: "edit" do
+      .group-info__edit
         Edit
+        
   .message-lists
     .message
       .message__info
@@ -17,6 +22,7 @@
           太郎
         %p.message__info__date
           2020年4月
+
       %p.message__text
         aaaaa
 
@@ -27,4 +33,5 @@
         %label{class: "message-box__image"}
           = icon("fas", "image")
           %input{type: "file", class: "message-box__image--file"} 
+
       %input{type: "submit", class: "submit-btn", value: "Send"}
