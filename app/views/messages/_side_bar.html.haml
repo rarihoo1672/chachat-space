@@ -1,1 +1,23 @@
-meinnba- 
+.side_bar
+  .header
+    .header__user-box
+      %h2.header__user-box--name
+        アヤト
+      %ul.header__user-box__menu
+        %li.header__user-box__menu--edit-user
+          = link_to "#" do
+            = icon("far"," fa-edit")
+        %li.header__user-box__menu--new-group
+          = link_to "#" do
+            = icon("fas", "cog")
+  .groups
+    = link_to "#", class: "group" do
+      %p.group__name
+        課題提出チーム
+      %p.group__message
+        あああああああああああああああ
+    = link_to "#", class: "group" do
+      %p.group__name
+        test,test
+      %p.group__message
+        aaaaaaaaaaaaaaaa
