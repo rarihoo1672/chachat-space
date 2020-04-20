@@ -6,7 +6,7 @@
 
       %ul.header__user-box__menu
         %li.header__user-box__menu--edit-group
-          = link_to  "#" do
+          = link_to new_group_path do
             = icon("far"," fa-edit")
         %li.header__user-box__menu--new-user
           = link_to edit_user_path(current_user) do
