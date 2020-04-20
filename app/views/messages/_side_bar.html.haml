@@ -13,14 +13,10 @@
             = icon("fas", "cog")
 
   .groups
-    = link_to "#", class: "group" do
-      %p.group__name
-        課題提出チーム
-      %p.group__message
-        あああああああああああああああ
-        
-    = link_to "#", class: "group" do
-      %p.group__name
-        test,test
-      %p.group__message
-        aaaaaaaaaaaaaaaa
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#', class: "group__group-box" do
+          .group__group-box__name
+            = group.name
+          .group__group-box__message
+            メッセージはまだありません。
