@@ -1,37 +1,30 @@
 .main_chat
   .group-info
     .group-info__box
-      %h2.group-info__box__group-name
-        グループネーム
+      %h2.group-info__box__name
+        = @group.name
+    
 
       %ul.group-info__box__member-list
-        Member :
-        %li.group-info__box__member-list--menber
-          いいいいい
-        %li.group-info__box__member-list--menber
-          あああああ  
+        チームメンバー
+        - @group.users.each do |user|
+          %li
+            = user.name
 
-    = link_to "#", class: "edit" do
+    = link_to edit_group_path(current_user)  do
       .group-info__edit
         Edit
         
-  .message-lists
-    .message
-      .message__info
-        %p.message__info__name
-          太郎
-        %p.message__info__date
-          2020年4月
 
-      %p.message__text
-        aaaaa
+  .message-lists
+    = render @messages
+
 
   .message-form
-    %form.new-message
-      .message-box
-        %input{type: "text", class: "message-box__text", placeholder: "type a message"}
-        %label{class: "message-box__image"}
-          = icon("fas", "image")
-          %input{type: "file", class: "message-box__image--file"} 
-
-      %input{type: "submit", class: "submit-btn", value: "Send"}
+    = form_for [@group, @message] do |f|
+      .chat-box
+        = f.text_field :chat_message, class: "chat-box__text", placeholder: "type a message"
+        = f.label :chat_image, class: "chat-box-box__label" do
+          = icon("fas", "image", class: "chat-box__label--icon")
+          = f.file_field :chat_image, class: "chat-box__label--hidden"
+      = f.submit "Send", class: "submit-btn"
