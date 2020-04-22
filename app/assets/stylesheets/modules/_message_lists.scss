@@ -1,0 +1,32 @@
+.message-lists {
+  height: calc(100vh - 100px - 90px);
+  background-color: #fafafa;
+  padding: 38px 40px;
+  overflow: auto;
+
+  .message {
+    margin-bottom: 46px;
+
+    .message__info {
+      margin-bottom: 12px;
+
+
+      &__name {
+        color: #333333;
+        font-size: 16px;
+        margin-right: 10px;
+        font-weight: bold;
+      }
+
+      &__date {
+        color: #999999;
+        font-size: 12px;
+      }
+    }
+
+    .message__text {
+      color: #434a54;
+      font-size: 14px;
+    }
+  }
+}

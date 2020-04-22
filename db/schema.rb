@@ -29,12 +29,12 @@ ActiveRecord::Schema.define(version: 20200421082708) do
   end
 
   create_table "messages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.text     "chat_message", limit: 65535
+    t.string   "chat_message"
     t.string   "chat_image"
-    t.integer  "group_id",                   null: false
-    t.integer  "user_id",                    null: false
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.integer  "group_id",     null: false
+    t.integer  "user_id",      null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.index ["group_id"], name: "index_messages_on_group_id", using: :btree
     t.index ["user_id"], name: "index_messages_on_user_id", using: :btree
   end

@@ -4,5 +4,5 @@ class Message < ApplicationRecord
 
   validates :chat_message, presence: true, unless: :chat_image?
 
-  mount_uploader :image, ImageUploader
+  mount_uploader :chat_image, ImageUploader
 end
