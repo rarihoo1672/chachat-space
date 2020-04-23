@@ -3,10 +3,10 @@
     .group-info__box
       %h2.group-info__box__name
         = @group.name
-    
 
       %ul.group-info__box__member-list
-        チームメンバー
+        %p.group-info__box__title
+          メンバー
         - @group.users.each do |user|
           %li
             = user.name
