@@ -1,4 +1,5 @@
 $(function(){
+
   function adduser(user) {
     let html = `
       <div class="chat-group-user clearfix">
@@ -17,10 +18,12 @@ $(function(){
     `;
     $("#user-search-result").append(html);
   }
+
   function addMember(userId) {
     let html = `<input value="${userId}" name="group[user_ids][]" type="hidden" id="group_user_ids_${userId}" />`;
     $(`#${userId}`).append(html);
   }
+
   function addDeleteUser(name, id) {
     let html = `
     <div class="chat-group-user clearfix" id="${id}">
@@ -29,6 +32,8 @@ $(function(){
     </div>`;
     $(".js-add-user").append(html);
   }
+
+
   $("#user-search-field").on("keyup", function() {
     let input = $("#user-search-field").val();
 
@@ -54,6 +59,7 @@ $(function(){
         alert("ユーザーが表示されません");
       });
   });
+
   $(document).on("click", ".chat-group-user__btn--add", function() { 
     const userName = $(this).attr("data-user-name");
     const userId = $(this).attr("data-user-id");
@@ -63,6 +69,7 @@ $(function(){
     addDeleteUser(userName, userId);
     addMember(userId);
   });
+  
   $(document).on("click", ".chat-group-user__btn--remove", function() {
     $(this)
       .parent()
